@@ -254,3 +254,24 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 52ms (Views: 49.4ms)
 
 
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-02 15:46:41 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (111.6ms)
+Completed 200 OK in 420ms (Views: 345.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-02 15:47:42 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 82ms (Views: 80.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-02 15:49:06 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 70ms (Views: 68.0ms)
+
+
