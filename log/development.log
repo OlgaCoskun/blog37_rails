@@ -719,3 +719,162 @@ Processing by ContactsController#new as HTML
 Completed 200 OK in 159ms (Views: 156.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-03 15:44:07 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 15:46:33 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOWtwo+kI407H3M45VF/kzVao8zGgEVt5qJ0okPGiPMrt4dAsYTT3xeW09hVjtNYwT/w0uv9lmPcwVBbtsXBPw==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+No template found for ContactsController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-03 15:48:04 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 15:48:05 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SICvyV3M9iGenE/heS5VJjsUD985P6Lmcqp5Ocq/AjnP0oVLY+wGc7IV7wHJ8fntz3FcwRRCcehIyV3AP7xL9Q==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+  Rendering contacts/create.html.erb within layouts/application
+  Rendered contacts/create.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 15:53:22 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SICvyV3M9iGenE/heS5VJjsUD985P6Lmcqp5Ocq/AjnP0oVLY+wGc7IV7wHJ8fntz3FcwRRCcehIyV3AP7xL9Q==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+  Rendering contacts/create.html.erb within layouts/application
+  Rendered contacts/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-03 16:02:26 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 50ms (Views: 47.8ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 16:02:28 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSC8ufjaYUfTfDqv6JJF8HBzNtZIsJMiKCYO1nXX/+cScpY7xvqRFf/1mk9YTek7hBZlyGXNQCwSRSovgNS2Kw==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/contacts_controller.rb:6:in `create'
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 16:09:35 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSC8ufjaYUfTfDqv6JJF8HBzNtZIsJMiKCYO1nXX/+cScpY7xvqRFf/1mk9YTek7hBZlyGXNQCwSRSovgNS2Kw==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+  Rendering contacts/create.html.erb within layouts/application
+  Rendered contacts/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 49.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-10-03 16:09:39 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/contacts" for 127.0.0.1 at 2017-10-03 16:09:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/contacts"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-03 16:09:46 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/olga/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/olga/.rvm/gems/ruby-2.3.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.4ms)
+Completed 200 OK in 115ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-10-03 16:09:54 +0300
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 16:09:56 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UjM9lS01SXqaF1NaOO6pKdCb4jCeTV0t+hW8Pv4LaKHVYRcXExW5KLae87qIMQXiJP6xLrMwjiPAdpjHCwghbQ==", "contact"=>{"email"=>"", "message"=>""}, "commit"=>"Send message"}
+  Rendering contacts/create.html.erb within layouts/application
+  Rendered contacts/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mContact Load (2.1ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/contacts" for 127.0.0.1 at 2017-10-03 16:12:58 +0300
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UjM9lS01SXqaF1NaOO6pKdCb4jCeTV0t+hW8Pv4LaKHVYRcXExW5KLae87qIMQXiJP6xLrMwjiPAdpjHCwghbQ==", "contact"=>{"email"=>"dsfsdf", "message"=>"11111"}, "commit"=>"Send message"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.6ms)[0m  [1m[32mINSERT INTO "contacts" ("email", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "dsfsdf"], ["message", "11111"], ["created_at", "2017-10-03 13:12:58.445512"], ["updated_at", "2017-10-03 13:12:58.445512"]]
+  [1m[35m (166.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering contacts/create.html.erb within layouts/application
+  Rendered contacts/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 254ms (Views: 39.6ms | ActiveRecord: 189.8ms)
+
+
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" LIMIT ?[0m  [["LIMIT", 11]]
