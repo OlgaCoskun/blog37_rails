@@ -1631,3 +1631,428 @@ Completed 200 OK in 297ms (Views: 37.9ms | ActiveRecord: 210.5ms)
 
 
   [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:15:37 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-10 15:15:43 +0300
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 484ms (Views: 482.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-10-10 15:15:52 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qi3Kc8R96MNyUB6rAbzpwwBmnvNgmu9S+uEfVnLwyogZbT8+qgiPx6O3uyk7zr2gNJ0tSResaciYw44tVArUrg==", "article"=>{"title"=>"hello", "text"=>"blabla"}, "commit"=>"Save Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["text", "blabla"], ["created_at", "2017-10-10 12:15:52.301258"], ["updated_at", "2017-10-10 12:15:52.301258"]]
+  [1m[35m (233.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering articles/create.html.erb within layouts/application
+  Rendered articles/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 313ms (Views: 47.0ms | ActiveRecord: 259.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:15:54 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/articles" for 127.0.0.1 at 2017-10-10 15:16:08 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qi3Kc8R96MNyUB6rAbzpwwBmnvNgmu9S+uEfVnLwyogZbT8+qgiPx6O3uyk7zr2gNJ0tSResaciYw44tVArUrg==", "article"=>{"title"=>"hello", "text"=>"blabla"}, "commit"=>"Save Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["text", "blabla"], ["created_at", "2017-10-10 12:16:08.234158"], ["updated_at", "2017-10-10 12:16:08.234158"]]
+  [1m[35m (177.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering articles/create.html.erb within layouts/application
+  Rendered articles/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 239ms (Views: 49.9ms | ActiveRecord: 179.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:16:10 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:17:13 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/articles" for 127.0.0.1 at 2017-10-10 15:17:19 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qi3Kc8R96MNyUB6rAbzpwwBmnvNgmu9S+uEfVnLwyogZbT8+qgiPx6O3uyk7zr2gNJ0tSResaciYw44tVArUrg==", "article"=>{"title"=>"hello", "text"=>"blabla"}, "commit"=>"Save Article"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello"], ["text", "blabla"], ["created_at", "2017-10-10 12:17:19.266835"], ["updated_at", "2017-10-10 12:17:19.266835"]]
+  [1m[35m (194.1ms)[0m  [1m[36mcommit transaction[0m
+  Rendering articles/create.html.erb within layouts/application
+  Rendered articles/create.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 267ms (Views: 61.8ms | ActiveRecord: 197.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:17:20 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/articles" for 127.0.0.1 at 2017-10-10 15:40:44 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qi3Kc8R96MNyUB6rAbzpwwBmnvNgmu9S+uEfVnLwyogZbT8+qgiPx6O3uyk7zr2gNJ0tSResaciYw44tVArUrg==", "article"=>{"title"=>"hello2", "text"=>"blabla2"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello2"], ["text", "blabla2"], ["created_at", "2017-10-10 12:40:44.413518"], ["updated_at", "2017-10-10 12:40:44.413518"]]
+  [1m[35m (192.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering articles/create.html.erb within layouts/application
+  Rendered articles/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 294ms (Views: 96.1ms | ActiveRecord: 193.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-10 15:42:39 +0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/articles" for 127.0.0.1 at 2017-10-10 15:42:50 +0300
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qi3Kc8R96MNyUB6rAbzpwwBmnvNgmu9S+uEfVnLwyogZbT8+qgiPx6O3uyk7zr2gNJ0tSResaciYw44tVArUrg==", "article"=>{"title"=>"hello3", "text"=>"blabla3"}, "commit"=>"Save Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "hello3"], ["text", "blabla3"], ["created_at", "2017-10-10 12:42:50.799574"], ["updated_at", "2017-10-10 12:42:50.799574"]]
+  [1m[35m (143.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 264ms (ActiveRecord: 145.5ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2017-10-10 15:42:50 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ArticlesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
