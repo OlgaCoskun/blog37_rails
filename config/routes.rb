@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'
 
+  get 'destroy' => 'articles#destroy'
+
 #два способа определения сущности:
 #1.get 'contacts' => 'contacts#new'
   #resource :contacts, only: [:create]
